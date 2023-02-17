@@ -1,0 +1,111 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(#d5a3ff 0%, #77a5f8 100%);
+}
+
+.wrapper {
+  background: #fff;
+  width: 90%;
+  max-width: 1270px;
+  height: auto;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+hr {
+  width: 100px;
+  margin: 10px auto;
+}
+
+.members {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  margin: 0 -8px; /* add negative margin to compensate for padding of children */
+}
+
+.team-mem {
+  width: 45%;
+  margin: 8px;
+  text-align: center;
+  width: calc(20% - 16px); /* use calc to calculate width dynamically */
+  max-width: 200px; /* set a max width to prevent elements from getting too large */
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+h4,
+p {
+  text-align: center;
+  font-size: 1rem;
+  margin: 7px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  hr {
+    width: 50px;
+    margin: 5px auto;
+  }
+
+  .members {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0; /* remove negative margin */
+    overflow-x: scroll;
+  }
+
+  .team-mem {
+    width: calc(50% - 16px); /* use calc to calculate width dynamically */
+    max-width: none; /* remove max width */
+  }
+
+  img {
+    width: 80%;
+    max-width: 150px;
+  }
+
+  h4,
+  p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team-mem {
+    width: calc(20% - 16px); /* use calc to calculate width dynamically */
+    max-width: 200px; /* set a max width to prevent elements from getting too large */
+  }
+}
